@@ -1,0 +1,94 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+@import "../../styles/partials/global";
+
+$background-image-DataVis: url("../../assets/images/DataVisBackground.png");
+
+.data-vis {
+  &__main {
+    display: flex;
+    flex-direction: row;
+    background-color: $green-main;
+    width: 100vw;
+
+    a:hover,
+    a:visited,
+    a:link,
+    a:active {
+      text-decoration: none;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    background-color: $green-white;
+    background-image: $background-image-DataVis;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -5rem;
+    height: 40rem;
+    margin: 8rem 5rem 4rem;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+
+    &-left {
+      width: 100%;
+    }
+
+    &-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      background-color: $green-white;
+      border-radius: 0 0.5rem 0.5rem 0;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10rem;
+    padding: 4rem auto;
+    color: $green-main-d4;
+
+    .subscript {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-left: 0.5rem;
+      position: relative;
+      left: -0.5rem;
+      top: 0.45rem;
+      z-index: 0;
+    }
+  }
+
+  &__data {
+    display: flex;
+    justify-content: center;
+    width: 15rem;
+    padding: 2rem 2rem;
+    background-color: $green-main;
+    border-radius: 1rem;
+    transition: 0.2s ease-in-out;
+    font-size: 3rem;
+    font-weight: 600;
+    color: $green-white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+
+    &:hover {
+      background-color: $green-main-d4;
+      cursor: pointer;
+    }
+  }
+}

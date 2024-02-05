@@ -1,0 +1,98 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+@import "../../styles/partials/global";
+
+
+.nav-container {
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.3);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  background-color: rgb(255, 255, 255);
+  // width: 100vw;
+
+  @include desktop {
+    padding: 1rem 4rem 1rem 4rem;
+  }
+
+  &__logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  &__logo {
+    color: $green-main;
+    @include desktop {
+      font-size: 2.5rem;
+    }
+  }
+
+  span {
+    color: $green-main-d4;
+  }
+
+  &__links-container {
+    display: flex;
+    text-align: center;
+    padding-top: 0.25rem;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    gap: 1rem;
+    padding-top: 1rem;
+
+    @include desktop {
+      gap: 2rem;
+    }
+  }
+
+  &__list-item {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease-in-out;
+
+    @include desktop {
+      font-size: 1.2rem;
+      color: $green-main-d3;
+      font-weight: 600;
+    }
+
+    &:hover {
+      border-bottom: 3px solid $green-main-d1;
+      transition: 0.3s ease-in-out;
+    }
+  }
+
+  &__logo-img {
+    height: 60px;
+    width: 60px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $green-main-d3;
+  }
+}
+
+.active {  
+  border-bottom: 3px solid $green-main-d1;
+  transition: 0.3s ease-in-out;
+}

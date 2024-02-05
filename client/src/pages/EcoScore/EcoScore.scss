@@ -1,0 +1,46 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+@import "../../styles/partials/global";
+
+.main {
+  display: flex;
+  flex-direction: row;
+  background-color: $green-main;
+  width: 100vw;
+  height: 100vh;
+
+  &__card-example {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 10rem;
+    background-color: $green-white;
+    margin: 5rem 5rem;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+  }
+
+  &__join-now {
+    display: flex;
+    justify-content: center;
+    // aligh-items: center;
+    // align-content: center;
+    width: 15rem;
+    margin-top: 2rem;
+    padding: 2rem 2rem;
+    background-color: $blue-1;
+    border-radius: 1rem;
+    transition: 0.2s ease-in-out;
+    font-size: 1rem;
+    font-weight: 600;
+
+    &:hover {
+      background-color: $blue-2;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+@import "../../styles/partials/global";
+
+.footer {
+  position: relative;
+  width: 100%;
+  background-color: $green-main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0rem;
+
+  background-color: $green-white;
+
+  &__dev-list {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__list-item {
+    color: $green-main-d1;
+  }
+
+  &__dev-header {
+    padding: 0.5rem 0rem;
+  }
+
+  &__logo {
+    color: $green-main;
+    font-size: 2rem;
+  }
+
+  span {
+    color: $green-main-d4;
+  }
+
+  &__logo-container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo-con {
+    padding-top: 0.2rem;
+  }
+
+  &__logo-img {
+    height: 40px;
+    width: 40px;
+  }
+}

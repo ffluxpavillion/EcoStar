@@ -1,0 +1,59 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+@import "../../styles/partials/global";
+
+.hero {
+  background-image: url("../../assets/images/eco-hero-img.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 90vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  &__container {
+    width: 45%;
+    padding-right: 4rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+    line-height: 2.6rem;
+    color: $green-white;
+  }
+
+  &__button-container {
+    margin-top: 1rem;
+  }
+
+  &__button {
+    height: 3rem;
+    border-radius: 4px;
+    width: 40%;
+    background-color: $green-main-d2;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    color: $green-white;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $green-main-d4;
+      transition: 0.3s ease-in-out;
+    }
+  }
+  span.copyright {
+    color: $green-main-d4;
+    font-size: 1rem;
+  }
+}
+
+span.subscript-hero {
+  position: relative;
+  top: 0.5rem;
+  font-size: 1.2rem;
+  color: $green-white;
+  margin-top: 1rem;
+  font-weight: 600;
+}

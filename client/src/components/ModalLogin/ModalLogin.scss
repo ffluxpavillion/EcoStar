@@ -1,0 +1,181 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+@import "../../styles/partials/global";
+
+.login-modal {
+  &__overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba($grey-1, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 6rem;
+    left: 0;
+    z-index: 99;
+  }
+
+  &__container {
+    width: 30rem;
+    margin: auto;
+    background-color: $green-light;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.2rem;
+    padding: 1.5rem 4rem;
+    z-index: 99;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+  }
+
+  &__close {
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: -2rem;
+
+    img {
+      width: 1.3rem;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__col-left {
+    padding-bottom: 0.2rem;
+  }
+
+  &__col-right {
+    display: flex;
+  }
+
+  &__content {
+    padding: 1rem 2rem;
+    color: $green-main-d4;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-top: initial;
+    margin-bottom: 1.7rem;
+
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: $green-main-d4;
+    }
+  }
+
+  &__text {
+    p {
+      font-size: 0.9rem;
+      max-width: 35rem;
+      padding-right: 4.5rem;
+      line-height: 1.5rem;
+    }
+  }
+  &__buttons {
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+    @include tablet {
+      margin-left: auto;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    border-radius: 0.4rem;
+    border: 1px solid $grey-2;
+  }
+
+  &__submit {
+    transition: background-color 0.25s, color 0.25s;
+    background-color: $green-white;
+    border: 1px solid $green-main-d4;
+    border-radius: 1.25rem;
+    padding: 0.35rem 2.9rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin: 1rem 0 0.2rem;
+    flex-grow: 1;
+
+    &:hover {
+      background-color: $green-main;
+      color: $green-light;
+      transition: border-color 0.25s, color 0s, background-color 0.25s;
+      cursor: pointer;
+    }
+  }
+
+  &__separator {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem 0;
+    width: 100%;
+    color: $grey-2;
+
+    &-or {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 2rem;
+      width: 2rem;
+      border: 1px solid $grey-2;
+      border-radius: 0.5rem;
+    }
+  }
+
+  &__button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: $grey-2;
+  }
+
+  &__cancel, &__login, &__create {
+    transition: background-color 0.25s, color 0.25s;
+    background-color: $green-white;
+    border: 1px solid $green-main-d4;
+    border-radius: 1.25rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.35rem 1rem;
+    margin-bottom: 1rem;
+
+    &:hover {
+      background-color: $red;
+      color: $green-light;
+      transition: border-color 0.25s, color 0s, background-color 0.25s;
+      cursor: pointer;
+    }
+  }
+
+  &__create:hover {
+      background-color: $blue-1;
+  }
+  &__login:hover {
+      background-color: $green-main;
+  }
+}

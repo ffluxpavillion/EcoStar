@@ -1,0 +1,193 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@import "../../styles/partials/global";
+
+#Tagline {
+  color: rgba(62, 63, 77, 0.878);
+  font-weight: 600;
+  font-size: 2rem;
+  font-family: "League Spartan Medium";
+
+  letter-spacing: 0.02rem;
+  word-spacing: 0.2rem;
+}
+#GlobalImpact {
+  font-family: "League Spartan ExtraBold";
+  padding-left: 10px;
+  font-style: italic;
+}
+
+#EcoStar {
+  color: #347d7b;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 3rem;
+  padding: 10px;
+  margin: 10px;
+  align-items: baseline;
+}
+
+#SUPER {
+  color: chartreuse;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 5rem;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+  font-family: "League Spartan ExtraBold";
+}
+
+#SuperFast {
+  color: gold;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 5rem;
+  padding-bottom: 2rem;
+  font-family: "League Spartan ExtraBold";
+}
+
+// green card
+.partnerships-main {
+  display: flex;
+  flex-direction: row;
+  background-color: $green-main;
+  width: 100vw;
+
+  * h1,
+  h2,
+  h3,
+  a {
+    font-family: "League Spartan SemiBold";
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+  }
+
+  a:hover,
+  a:visited,
+  a:link,
+  a:active {
+    text-decoration: none;
+    color: #5870a9;
+  }
+
+  &__card-example {
+    // display: flex;
+    align-items: baseline;
+    flex-grow: 1;
+    // width: 10rem;
+    height: 54rem;
+    margin: 5rem 5rem 8rem;
+    border-radius: 1rem;
+    background-color: $green-white;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+    padding-top: 4rem;
+  }
+}
+
+.partnerships__section {
+}
+
+.partnerships__div {
+  display: flex;
+  justify-content: center;
+
+  &-top {
+    justify-content: center;
+  }
+
+  &-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // color: #5870a9;
+    font-size: 2.5rem;
+    font-weight: 800;
+
+    justify-content: center;
+  }
+}
+
+.grid {
+  &-container {
+    display: grid;
+    grid-template-rows: 200px 200px;
+    grid-template-columns: 200px 200px 200px 200px;
+    gap: 4rem;
+    justify-content: center;
+  }
+
+  &-item {
+    border: 1px solid rgba(0, 0, 0, 0.185);
+    padding: 1rem;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.5);
+    min-width: 12.5rem;
+    min-height: 12rem;
+    border-radius: 5px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    &:hover {
+      border: 10px white;
+      color: black;
+    }
+  }
+
+  &-content {
+    justify-content: center;
+  }
+
+  &-header {
+    justify-content: center;
+    place-items: center;
+  }
+
+  &-logo {
+    background-color: #fff;
+  }
+
+  &-img {
+    width: 100%;
+    object-fit: contain;
+    background-color: #fff;
+  }
+}
+
+// Repeating Background Image Alt Option (Leaf)
+
+// .background {
+//   height: 100vh; /* Set the height to 50% of the viewport height */
+//   background-color: #fff; /* Set the background color to white */
+
+//   /* Set the background image using a relative path */
+//   background-image: url('../../assets/logo/eco-star-logo.png');
+
+//   /* Adjust the size of the background image to make it smaller */
+//   background-size: 10%; /* Set to a percentage of the container's width to make it smaller */
+
+//   /* Position the background image */
+//   background-position: 100px 100px, 10px 100px;
+//   background-size: 93px 92px;
+
+//   /* Ensure that the background is positioned behind the content */
+//   position: relative; /* Relative positioning for the container */
+//   z-index: 0; /* Lower z-index so content can be above the background */
+// }
+
+// /* Ensure that other content will appear above the background */
+// .content {
+//   position: relative; /* Relative positioning for the content */
+//   z-index: 1; /* Higher z-index so it's above the background */
+// }
+// .background::before {
+//   content: "";
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   background-color: rgba(137, 134, 134, 0.74); /* This is a black overlay with 50% opacity */
+//   z-index: -1;
+// }
